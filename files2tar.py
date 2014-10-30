@@ -157,7 +157,7 @@ def main(args):
 
 
 def parse_args(argv):
-    parser = argparse.ArgumentParser(description='Pack a list of files into tar archives of a given size',
+    parser = argparse.ArgumentParser(description='Distribute a list of files among tar archives of a given size',
         epilog='Example: find /input -type f -print | files2tar -s 200G -m 2TB base-name /output')
     parser.add_argument('-d', '--debug', action='store_true', default=False,
         help='set log level to debug')

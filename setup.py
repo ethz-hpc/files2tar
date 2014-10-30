@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Steven Armstrong',
     author_email='steven.armstrong@id.ethz.ch',
-    description='pack a list of files into tar archives of a given size',
+    description='distribute a list of files among tar archives of a given size',
     py_modules=['files2tar'],
     entry_points='''
         [console_scripts]
