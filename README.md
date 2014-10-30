@@ -12,7 +12,7 @@ You feed it list of files and you get one or more tar archives.
 out=~/tmp/files2tar
 
 # create input file lists and tar archive and verify result
-find /tmp -type f | files2tar -d --tar-size 1M --no-archive example $out
+find /tmp -type f | files2tar --tar-size 1M --no-archive example $out
 ```
 
 ## batch usage ##
@@ -24,7 +24,7 @@ e.g. to submit to a cluster batch system to create archives in parallel.
 out=~/tmp/files2tar
 
 # create input file lists
-find /tmp -type f | files2tar -d --tar-size 1M --no-archive example $out
+find /tmp -type f | files2tar --tar-size 1M --no-archive example $out
 
 # create tar archives
 for list in $out/*.files; do
