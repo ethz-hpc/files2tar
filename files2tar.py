@@ -165,8 +165,6 @@ def parse_args(argv):
         help='set log level to info')
     parser.add_argument('--files-from', type=argparse.FileType('r'), default=sys.stdin, metavar='FILE',
         help='read list of source-file names from FILE. Defaults to stdin')
-    parser.add_argument('-0', '--null', action='store_true',
-        help='file list is terminated by a null character instead of by whitespace')
     default_tar_size = '1G'
     parser.add_argument('-s', '--tar-size', default=default_tar_size, type=size_in_bytes,
         help='prefered target size of tar archives, defaults to: \'{}\''.format(default_tar_size))
