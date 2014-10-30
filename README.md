@@ -5,7 +5,7 @@ tar will create archives of a specified size.
 # Usage #
 
 ## standalone mode ##
-You feed it list of files and you get one or more tar archives.
+Feed it a list of files and you get one or more tar archives.
 
 ```shell
 # where to store files
@@ -16,8 +16,8 @@ find /tmp -type f | files2tar --tar-size 1M --no-archive example $out
 ```
 
 ## batch usage ##
-You feed it list of files and you get lists of files to further process.
-e.g. to submit to a cluster batch system to create archives in parallel.
+Feed it a list of files and you get one or more file lists for further processing.
+e.g. for submiting to a batch system where archives are created in parallel.
 
 ```shell
 # where to store files
