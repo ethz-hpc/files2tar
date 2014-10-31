@@ -8,6 +8,9 @@ import subprocess
 import logging
 
 
+__version__ = '0.1.1'
+__description__ = 'Distribute a list of files among tar archives of a given size'
+
 logging.basicConfig(level=logging.ERROR, format='%(levelname)s: %(message)s', stream=sys.stderr)
 log = logging.getLogger(__name__)
 
@@ -158,8 +161,9 @@ def main(args):
 
 
 def parse_args(argv):
-    parser = argparse.ArgumentParser(description='Distribute a list of files among tar archives of a given size',
+    parser = argparse.ArgumentParser(description=__description__,
         epilog='Example: find /input -type f -print | files2tar -s 200G -m 2TB base-name /output')
+    parser.add_argument('-V', '--version', action='version', version='%(prog)s {0}'.format(__version__))
     parser.add_argument('-d', '--debug', action='store_true', default=False,
         help='set log level to debug')
     parser.add_argument('-v', '--verbose', action='store_true', default=False,
