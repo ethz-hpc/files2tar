@@ -78,6 +78,7 @@ class FileListWriter(object):
         log.info('switching to next file: {0}'.format(file_path))
         self.current_file = open(file_path, 'w')
         self.current_size = 0
+        self.largest_file_size = 0
 
     def add(self, line_or_filepath):
         if line_or_filepath.endswith('\n'):
