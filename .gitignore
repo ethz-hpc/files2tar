@@ -7,3 +7,5 @@
 *.rej
 *.swo
 *.swp
+/build/
+/dist/
